@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>ur5_demo_support</name>
   <version>0.0.0</version>
   <description>The ur5_demo_support package</description>
