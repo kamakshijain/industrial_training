@@ -14,5 +14,5 @@ install:
   - docker run --name $CONTAINER_NAME -d
     -v $TRAVIS_BUILD_DIR:$TRAVIS_BUILD_DIR
     $CONTAINER_IMAGE
-  - docker cp $TRAVIS_BUILD_DIR|- $CONTAINER_NAME:$TRAVIS_BUILD_DIR
+  - docker cp $TRAVIS_BUILD_DIR $CONTAINER_NAME:$TRAVIS_BUILD_DIR
   - docker run /bin/bash -c 'cd $TRAVIS_BUILD_DIR && ls'
