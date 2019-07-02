@@ -1,0 +1,17 @@
+sudo: required
+
+services:
+  - docker
+
+language: minimal
+
+env:
+  - CONTAINER_IMAGE: ros:melodic
+  - CONTAINER_NAME: industrial_training_ci
+
+install:
+  - docker pull $CONTAINER_IMAGE
+  - docker run --name $CONTAINER_NAME -d
+    -v $TRAVIS_BUILD_DIR:$TRAVIS_BUILD_DIR
+    $CONTAINER_IMAGE
+  - docker cp $TRAVIS_BUILD_DIR|- $CONTAINER_NAME:$TRAVIS_BUILD_DIR
