@@ -193,7 +193,7 @@ function build_ws()
   ci_run cd catkin_ws
 
   # Copy the exercise workspace into the home directory
-  ci_run cp -r $TRAVIS_BUILD_DIR$1 .
+  ci_run cp -r $TRAVIS_BUILD_DIR/$1 .
 
   # Initialize the workspace
   ci_run catkin init
